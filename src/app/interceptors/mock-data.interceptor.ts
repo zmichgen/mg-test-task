@@ -5,7 +5,7 @@ import { delay } from 'rxjs/operators';
 import { IItem } from '../models/item';
 
 const data = [
-    { id: '1789789', name: 'Автомобиль', comment: 'Иномрака', price: 32000 },
+    { id: '1789789', name: 'Автомобиль', comment: 'Иномарка', price: 32000 },
     { id: '1345345', name: 'Автомобиль ?', comment: 'Lada', price: 12000 }
 ];
 
