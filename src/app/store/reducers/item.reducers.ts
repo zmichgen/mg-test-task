@@ -13,7 +13,7 @@ export interface State extends EntityState<IItem> {
 
 export const initialState: State = adapter.getInitialState({ pending: false });
 
-export const reducer = (state: State = initialState, action: ItemUnion) => {
+export function reducer(state: State = initialState, action: ItemUnion) {
     switch (action.type) {
         case ItemActionTypes.AddItemRequest:
             return adapter.addOne(action.payload.item, { ...state, pending: false });
@@ -47,7 +47,7 @@ export const reducer = (state: State = initialState, action: ItemUnion) => {
         default:
             return state;
     }
-};
+}
 
 const {
     selectIds,

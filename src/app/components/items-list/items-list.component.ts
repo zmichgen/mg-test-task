@@ -27,7 +27,7 @@ export class ItemsListComponent implements OnInit {
         this.items$ = this.store.pipe(select(selectAllItems));
     }
 
-    addItem() {
+    addItem(e) {
         this.router.navigate(['create']);
     }
 
