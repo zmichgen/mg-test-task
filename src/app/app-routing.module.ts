@@ -4,10 +4,10 @@ import { ItemsListComponent } from './components/items-list/items-list.component
 import { CreateItemComponent } from './components/create-item/create-item.component';
 
 const routes: Routes = [
-    { path: 'goods', component: ItemsListComponent },
+    { path: '', component: ItemsListComponent },
     { path: 'create', component: CreateItemComponent },
     { path: 'update/:id', component: CreateItemComponent },
-    { path: '**', redirectTo: 'goods' },
+    { path: '**', redirectTo: '' },
 ];
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
