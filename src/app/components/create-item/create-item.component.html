@@ -1,0 +1,23 @@
+<form [formGroup]="itemsFormGroup" novalidate>
+    <div class="form-group">
+        <label for="itemName">Наименование товара</label>
+        <input type="text" class="form-control" id="itemName" formControlName="itemName">
+        <div class="text-danger" *ngIf="name.invalid && (name.touched || name.dirty || hasError)">
+            <span *ngIf="name.errors?.required">Поле обязательное</span>
+            <span *ngIf="name.errors?.minlength">Длина слова не менее 3 символов</span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="itemDescription">Описание товара</label>
+        <textarea class="form-control" id="itemDescription" rows="3" formControlName="itemDescription"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="itemPrice">Цена</label>
+        <input type="number" class="form-control" id="itemPrice" formControlName="itemPrice">
+        <div class="text-danger" *ngIf="price.invalid && (price.touched || price.dirty || hasError)">
+            <span *ngIf="price.errors?.required">Поле обязательное</span>
+        </div>
+    </div>
+    <button type="button" class="btn btn-primary" (click)="updateItem($event)">Сохранить</button>
+    <button type="button" class="btn btn-primary" (click)="cancel($event)">Отмена</button>
+</form>

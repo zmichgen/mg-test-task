@@ -1,0 +1,11 @@
+<div class="card text-left">
+    <div class="card-body">
+        <h4 class="card-title">Наименование: {{itemName}}</h4>
+        <p class="card-text">Описание: {{itemDescription}}</p>
+        <p class="card-text">Цена: {{itemPrice}} руб.</p>
+    </div>
+    <div class="flex-column buttons-block">
+        <button type="button" class="btn btn-primary btn-lg btn-block" (click)="deleteItem($event)">Удалить</button>
+        <button type="button" class="btn btn-primary btn-lg btn-block" (click)="updateItem($event)">Редактировать</button>
+    </div>
+</div>
